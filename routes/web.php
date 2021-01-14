@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Productos;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,8 @@ Route::get('arte/mision', function () {
 Route::get('arte/ubicacion', function () {
     return view('arte.ubicacion');
 });
+//productos
+Route::get('/productos', [Productos::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
