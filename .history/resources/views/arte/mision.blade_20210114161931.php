@@ -9,7 +9,7 @@
     <div class="row">
 
         <!--tarjeta 1 mision hotel-->
-        <div class="col-lg-6" style="background-color:rgb(252, 250, 250)">
+        <div class="col-lg-6" style="background-color:#ccc">
 
             <p>
                 <!-- Card Dark -->
@@ -62,14 +62,6 @@
                         </a>
 
                     </div>
-                    <hr class="hr-light">
-                    <hr class="hr-light">
-                    <br>
-                    <hr class="hr-light">
-                    <hr class="hr-light">
-                    <br>
-                    <hr class="hr-light">
-                    <hr class="hr-light">
 
                 </div>
                 <!-- Card Dark -->
@@ -79,7 +71,7 @@
 
 
         <!--tarjeta dos vision-->
-        <div class="col-lg-6" style="background-color:rgb(253, 252, 252)">
+        <div class="col-lg-6" style="background-color:rgb(238, 177, 177)">
 
             <p>
                 <!-- Card Dark -->

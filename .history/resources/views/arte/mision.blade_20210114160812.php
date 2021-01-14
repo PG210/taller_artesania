@@ -9,19 +9,13 @@
     <div class="row">
 
         <!--tarjeta 1 mision hotel-->
-        <div class="col-lg-6" style="background-color:rgb(252, 250, 250)">
+        <div class="col-lg-6" style="background-color:#ccc">
 
             <p>
                 <!-- Card Dark -->
-
                 <div class="card">
 
-                    <h4 class="card-title">ARTESANIAS SANDONA</h4>
                     <!-- Card image -->
-                    <hr class="hr-light">
-                    <hr class="hr-light">
-
-
                     <div class="container">
                         <br>
                         <div class="view overlay ">
@@ -40,12 +34,8 @@
                         <!-- Social shares button -->
 
                         <!-- Title -->
-                        <h4 class="card-title"></h4>
+                        <h4 class="card-title">Misión</h4>
                         <hr class="hr-light">
-                        <hr class="hr-light">
-                        <br>
-                        <hr class="hr-light">
-                        <br>
                        
                         <div class="view overlay">
                             <img class="card-img-top" src="../img/4.jpg" alt="Card image cap">
@@ -62,14 +52,6 @@
                         </a>
 
                     </div>
-                    <hr class="hr-light">
-                    <hr class="hr-light">
-                    <br>
-                    <hr class="hr-light">
-                    <hr class="hr-light">
-                    <br>
-                    <hr class="hr-light">
-                    <hr class="hr-light">
 
                 </div>
                 <!-- Card Dark -->
@@ -79,17 +61,19 @@
 
 
         <!--tarjeta dos vision-->
-        <div class="col-lg-6" style="background-color:rgb(253, 252, 252)">
+        <div class="col-lg-6" style="background-color:#ccc">
 
             <p>
                 <!-- Card Dark -->
                 <div class="card">
 
-                    <h4 class="card-title">MISION</h4>
-                        <hr class="hr-light">
-                        <hr class="hr-light">
-                        <br>
-                        Artesanías don Pedro, es una empresa que contribuye al mejoramiento integral de la actividad artesanal mediante el rescate y la preservación de los oficios y la tradición, promoviendo la competitividad apoyando a las microempresas y asociaciones artesanales de mujeres cabeza de familia mejorando la sostenibilidad de la actividad artesanal y el bienestar de los artesanos.
+                    <!-- Card image -->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="../img/4.jpg" alt="Card image cap">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
 
                     <!-- Card content -->
                     <div class="card-body elegant-color white-text rounded-bottom">
@@ -97,22 +81,14 @@
                         <!-- Social shares button -->
 
                         <!-- Title -->
-                        <h4 class="card-title"></h4>
+                        <h4 class="card-title">Visión</h4>
                         <hr class="hr-light">
-                        <hr class="hr-light">
-                        <br>
-                        
-                        <hr class="hr-light">
-                        <br>
-                        <hr class="hr-light">
-                        <div class="view overlay">
-                            <img class="card-img-top" src="../img/8.jpg" alt="Card image cap">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-
+                        <!-- Text -->
+                        <p class="card-text white-text mb-4">
+                            En el Hotel rivera del Mar tenemos como visión posicionarnos en el corto plazo y ser reconocido por nuestros clientes que son nuestra razón de existir, brindadores atención servicio y confort, logrando proporcionar una gran estadía en la ciudad. para
+                            una placentera estadía en nuestras instalaciones. Somos un equipo humano comprometido y organizado para la excelencia en el servicio, el en crecimiento personal y en el desarrollo de nuestras habilidades para su bienestar.
+                            Implementamos en la práctica cotidiana valores de responsabilidad en el desempeño de nuestros servicios, en el medio ambiente y en la comunidad con el fin de lograr una imagen de excelencia.
+                        </p>
                         <!-- Link -->
                         <a href="#!" class="white-text d-flex justify-content-end">
                             <h5>Read more <i class="fas fa-angle-double-right"></i></h5>

@@ -48,7 +48,7 @@
                         <br>
                        
                         <div class="view overlay">
-                            <img class="card-img-top" src="../img/4.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../img/6.jpg" alt="Card image cap">
                             <a>
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -85,11 +85,13 @@
                 <!-- Card Dark -->
                 <div class="card">
 
-                    <h4 class="card-title">MISION</h4>
+                    <h4 class="card-title">VISION</h4>
                         <hr class="hr-light">
                         <hr class="hr-light">
                         <br>
-                        Artesanías don Pedro, es una empresa que contribuye al mejoramiento integral de la actividad artesanal mediante el rescate y la preservación de los oficios y la tradición, promoviendo la competitividad apoyando a las microempresas y asociaciones artesanales de mujeres cabeza de familia mejorando la sostenibilidad de la actividad artesanal y el bienestar de los artesanos.
+                       Visión 
+                          Artesanías Juanita en el 2025, será la entidad que lidere el fortalecimiento de la actividad artesanal, contribuyendo al desarrollo local, regional y a la preservación de la cultura y la tradición en el municipio de Sandona.
+
 
                     <!-- Card content -->
                     <div class="card-body elegant-color white-text rounded-bottom">
@@ -98,15 +100,13 @@
 
                         <!-- Title -->
                         <h4 class="card-title"></h4>
-                        <hr class="hr-light">
-                        <hr class="hr-light">
-                        <br>
+                       
                         
                         <hr class="hr-light">
                         <br>
                         <hr class="hr-light">
                         <div class="view overlay">
-                            <img class="card-img-top" src="../img/8.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../img/5.jpg" alt="Card image cap">
                             <a>
                                 <div class="mask rgba-white-slight"></div>
                             </a>

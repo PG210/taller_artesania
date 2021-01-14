@@ -9,19 +9,13 @@
     <div class="row">
 
         <!--tarjeta 1 mision hotel-->
-        <div class="col-lg-6" style="background-color:rgb(252, 250, 250)">
+        <div class="col-lg-6" style="background-color:#ccc">
 
             <p>
                 <!-- Card Dark -->
-
                 <div class="card">
 
-                    <h4 class="card-title">ARTESANIAS SANDONA</h4>
                     <!-- Card image -->
-                    <hr class="hr-light">
-                    <hr class="hr-light">
-
-
                     <div class="container">
                         <br>
                         <div class="view overlay ">
@@ -62,14 +56,6 @@
                         </a>
 
                     </div>
-                    <hr class="hr-light">
-                    <hr class="hr-light">
-                    <br>
-                    <hr class="hr-light">
-                    <hr class="hr-light">
-                    <br>
-                    <hr class="hr-light">
-                    <hr class="hr-light">
 
                 </div>
                 <!-- Card Dark -->
@@ -79,7 +65,7 @@
 
 
         <!--tarjeta dos vision-->
-        <div class="col-lg-6" style="background-color:rgb(253, 252, 252)">
+        <div class="col-lg-6" style="background-color:#ccc">
 
             <p>
                 <!-- Card Dark -->
@@ -89,7 +75,7 @@
                         <hr class="hr-light">
                         <hr class="hr-light">
                         <br>
-                        Artesanías don Pedro, es una empresa que contribuye al mejoramiento integral de la actividad artesanal mediante el rescate y la preservación de los oficios y la tradición, promoviendo la competitividad apoyando a las microempresas y asociaciones artesanales de mujeres cabeza de familia mejorando la sostenibilidad de la actividad artesanal y el bienestar de los artesanos.
+                        Artesanías Juanita, es una empresa que contribuye al mejoramiento integral de la actividad artesanal mediante el rescate y la preservación de los oficios y la tradición, promoviendo la competitividad apoyando a las microempresas y asociaciones artesanales de mujeres cabeza de familia mejorando la sostenibilidad de la actividad artesanal y el bienestar de los artesanos.
 
                     <!-- Card content -->
                     <div class="card-body elegant-color white-text rounded-bottom">

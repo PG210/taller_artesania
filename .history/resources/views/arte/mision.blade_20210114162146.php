@@ -65,11 +65,6 @@
                     <hr class="hr-light">
                     <hr class="hr-light">
                     <br>
-                    <hr class="hr-light">
-                    <hr class="hr-light">
-                    <br>
-                    <hr class="hr-light">
-                    <hr class="hr-light">
 
                 </div>
                 <!-- Card Dark -->
