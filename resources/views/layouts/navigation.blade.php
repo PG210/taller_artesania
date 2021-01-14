@@ -13,7 +13,9 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    <div class="alert alert-dark" role="alert">
+                          <h2>BIENVENIDOS</h2>
+                    </div>
                     </x-nav-link>
                 </div>
             </div>
@@ -41,7 +43,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Logout') }}
+                                {{ __('Cerrar sesion') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -91,7 +93,7 @@
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
-                        {{ __('Logout') }}
+                        {{ __('Cerrar Sesion') }}
                     </x-responsive-nav-link>
                 </form>
             </div>
