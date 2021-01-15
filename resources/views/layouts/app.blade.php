@@ -61,7 +61,11 @@
             <li><a class="dropdown-item" href="#">Ofertas</a></li>
           </ul>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{url('/comentarios')}}">comentarios</a>
+        </li>
       </ul>
+     
     </div>
   </div>
 </nav>

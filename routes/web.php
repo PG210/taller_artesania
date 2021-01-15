@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Productos;
 use App\Http\Controllers\Datos;
+use App\Http\Controllers\Comentarios;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +28,7 @@ Route::get('arte/mision', [Datos::class, 'index']);
 Route::get('arte/ubicacion', [Datos::class, 'ubicacion']);
 //sombreros
 Route::get('/productos', [Productos::class, 'index']);
+
 //mochilas
 Route::get('/productos/mochilas', [Productos::class, 'mochila']);
 //tejidos
@@ -35,6 +37,10 @@ Route::get('/productos/tejidos', [Productos::class, 'tejidos']);
 Route::get('/productos/visuteria', [Productos::class, 'visuteria']);
 //ruanas
 Route::get('/productos/ruanas', [Productos::class, 'ruanas']);
+
+//comentarios
+Route::get('/comentarios', [Comentarios::class, 'index']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
