@@ -54,9 +54,10 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="{{url('/productos')}}">Sombreros</a></li>
-            <li><a class="dropdown-item" href="#">Mochilas</a></li>
-            <li><a class="dropdown-item" href="#">Tejidos</a></li>
-            <li><a class="dropdown-item" href="#">Visuterias</a></li>
+            <li><a class="dropdown-item" href="{{url('/productos/mochilas')}}">Mochilas</a></li>
+            <li><a class="dropdown-item" href="{{url('/productos/tejidos')}}">Tejidos</a></li>
+            <li><a class="dropdown-item" href="{{url('/productos/visuteria')}}">Visuterias</a></li>
+            <li><a class="dropdown-item" href="{{url('/productos/ruanas')}}">Ruanas</a></li>
             <li><a class="dropdown-item" href="#">Ofertas</a></li>
           </ul>
         </li>

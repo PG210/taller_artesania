@@ -25,8 +25,16 @@ Route::get('arte/mision', [Datos::class, 'index']);
 
 //ubicacion
 Route::get('arte/ubicacion', [Datos::class, 'ubicacion']);
-//productos
+//sombreros
 Route::get('/productos', [Productos::class, 'index']);
+//mochilas
+Route::get('/productos/mochilas', [Productos::class, 'mochila']);
+//tejidos
+Route::get('/productos/tejidos', [Productos::class, 'tejidos']);
+//visuteria
+Route::get('/productos/visuteria', [Productos::class, 'visuteria']);
+//ruanas
+Route::get('/productos/ruanas', [Productos::class, 'ruanas']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

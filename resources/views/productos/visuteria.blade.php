@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
-<h1 class="text-center"> SOMBREROS </h1>
+<h1 class="text-center"> VISUTERIA </h1>
 <div class="container">
  <div class="row">
-    @foreach($prod as $p)
+    @foreach($vis as $p)
       <div class="col-md-4 alert-success"><br>
         <div class="card" style="width: 15rem;">
                         <img src='{{ url("/imgProd/$p->fotoProducto") }}' class="card-img-top" alt="...">
@@ -22,5 +22,4 @@
         </div>
        <br>
 </div>
-
 @stop
