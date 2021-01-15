@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Productos;
-
+use App\Http\Controllers\Datos;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,25 +14,17 @@ use App\Http\Controllers\Productos;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Datos::class, 'principal']);
 //ruta mision vision
-Route::get('arte/vision', function () {
-    return view('arte.vision');
-});
+Route::get('arte/vision', [Datos::class, 'vision']);
 //histortia
-Route::get('arte/historia', function () {
-    return view('arte.historia');
-});
-Route::get('arte/mision', function () {
-    return view('arte.mision');
-});
+Route::get('arte/historia', [Datos::class, 'historia']);
+
+//mision
+Route::get('arte/mision', [Datos::class, 'index']);
 
 //ubicacion
-Route::get('arte/ubicacion', function () {
-    return view('arte.ubicacion');
-});
+Route::get('arte/ubicacion', [Datos::class, 'ubicacion']);
 //productos
 Route::get('/productos', [Productos::class, 'index']);
 

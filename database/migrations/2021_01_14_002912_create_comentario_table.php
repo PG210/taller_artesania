@@ -15,6 +15,12 @@ class CreateComentarioTable extends Migration
     {
         Schema::create('comentarios', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('cedCli');//atributo para referenciar a categoria
+            $table->foreign('cedCli')->references('id')->on('users');//llave foranea para referenciar a la tabla categorias
+            $table->unsignedBigInteger('id_Prod');//atributo para referenciar a categoria
+            $table->foreign('id_Prod')->references('referencia')->on('productos');//llave foranea para referenciar a la tabla categorias
+            $table->string('comentario', 200);
+            $table->dateTime('fecha');
             $table->timestamps();
         });
     }

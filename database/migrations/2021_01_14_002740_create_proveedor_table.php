@@ -14,8 +14,14 @@ class CreateProveedorTable extends Migration
     public function up()
     {
         Schema::create('proveedores', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->bigIncrements('idprov');
+            $table->string('nomProv', 50);
+            $table->string('dirProv', 50);
+            $table->string('telProv', 12);
+            $table->unsignedBigInteger('idProd');//atributo para referenciar a categoria
+            $table->foreign('idProd')->references('referencia')->on('productos');//llave foranea para referenciar a la tabla categorias
+            $table->float('preCompra');
+            
         });
     }
 
