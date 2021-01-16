@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Productos;
 use App\Http\Controllers\Datos;
 use App\Http\Controllers\Comentarios;
+use App\Http\Controllers\Factura;
+use App\Http\Controllers\Proveedores;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,6 +42,12 @@ Route::get('/productos/ruanas', [Productos::class, 'ruanas']);
 
 //comentarios
 Route::get('/comentarios', [Comentarios::class, 'index']);
+
+//factura
+Route::get('/factura', [Factura::class, 'index']);
+
+//proveedores
+Route::get('/proveedores', [Proveedores::class, 'index']);
 
 
 Route::get('/dashboard', function () {
