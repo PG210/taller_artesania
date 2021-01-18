@@ -17,4 +17,9 @@ class Comentarios extends Controller
         ->get();
         return view('productos.comentarios',['comen'=>$comen]);
     }
+    public function visu(){//retorna la vista o interactua con el modelo de datos
+        $cat=DB::table('categorias')
+        ->get();
+        return view('admin.visualizarCat',['cat'=>$cat]);
+    }
 }

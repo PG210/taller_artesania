@@ -66,11 +66,18 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{url('/factura')}}">Factura</a>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{url('/proveedores')}}">Proveedores</a>
-        </li>
-
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Administrador
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="{{url('/admin')}}">Categoria</a></li>
+            <li><a class="dropdown-item" href="{{url('/proveedores')}}">Proveedores</a></li>
+            <li><a class="dropdown-item" href="{{url('/productos/visuteria')}}">Visuterias</a></li>
+            <li><a class="dropdown-item" href="{{url('/productos/ruanas')}}">Ruanas</a></li>
+            <li><a class="dropdown-item" href="#">Ofertas</a></li>
+          </ul>
+        </li>  
       
         
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<h1 class="text-center"> VISUTERIA </h1>
+<h1 class="text-center"> VISUTERIAS </h1>
 <div class="container">
  <div class="row">
     @foreach($vis as $p)

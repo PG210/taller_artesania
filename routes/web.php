@@ -6,6 +6,7 @@ use App\Http\Controllers\Datos;
 use App\Http\Controllers\Comentarios;
 use App\Http\Controllers\Factura;
 use App\Http\Controllers\Proveedores;
+use App\Http\Controllers\Categorias;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,12 +48,23 @@ Route::get('/comentarios', [Comentarios::class, 'index']);
 Route::get('/factura', [Factura::class, 'index']);
 
 //proveedores
-Route::get('/proveedores', [Proveedores::class, 'index']);
-
-
+Route::get('/proveedores', [Proveedores::class, 'index'])->middleware(['admin']);
+//categoria
+Route::post('/categorias/registro', [Categorias::class, 'registrar'])->middleware(['admin']);
+//categoria visualizar
+Route::get('/categorias/visualizar', [Comentarios::class, 'visu'])->name('visualizar');
+//
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/admin', function () {
+    return view('admin.adminPrincipal');
+})->middleware(['admin']);
+
+Route::get('/dashboar', function () {
+    return view('alerta.alerta');
+});
 
