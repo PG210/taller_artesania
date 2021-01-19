@@ -73,8 +73,8 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="{{url('/admin')}}">Categoria</a></li>
             <li><a class="dropdown-item" href="{{url('/proveedores')}}">Proveedores</a></li>
-            <li><a class="dropdown-item" href="{{url('/productos/visuteria')}}">Visuterias</a></li>
-            <li><a class="dropdown-item" href="{{url('/productos/ruanas')}}">Ruanas</a></li>
+            <li><a class="dropdown-item" href="{{url('/productos/formulario')}}">Productos</a></li>
+            <li><a class="dropdown-item" href="{{url('/facturas/visualizar')}}">Facturas</a></li>
             <li><a class="dropdown-item" href="#">Ofertas</a></li>
           </ul>
         </li>  

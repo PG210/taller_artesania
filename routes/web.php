@@ -7,6 +7,7 @@ use App\Http\Controllers\Comentarios;
 use App\Http\Controllers\Factura;
 use App\Http\Controllers\Proveedores;
 use App\Http\Controllers\Categorias;
+use App\Http\Controllers\Productos\ManejoProd;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,7 +36,7 @@ Route::get('/productos', [Productos::class, 'index']);
 //mochilas
 Route::get('/productos/mochilas', [Productos::class, 'mochila']);
 //tejidos
-Route::get('/productos/tejidos', [Productos::class, 'tejidos']);
+Route::get('/productos/tejidos', [Productos::class, 'tejidos'])->name('tejidos');
 //visuteria
 Route::get('/productos/visuteria', [Productos::class, 'visuteria']);
 //ruanas
@@ -53,6 +54,12 @@ Route::get('/proveedores', [Proveedores::class, 'index'])->middleware(['admin'])
 Route::post('/categorias/registro', [Categorias::class, 'registrar'])->middleware(['admin']);
 //categoria visualizar
 Route::get('/categorias/visualizar', [Comentarios::class, 'visu'])->name('visualizar');
+//formulario productos
+Route::get('/productos/formulario', [ManejoProd::class, 'index'])->name('prodForm')->middleware(['admin']);
+//ruta guardar productos
+Route::post('/productos/registro', [ManejoProd::class, 'registro']);
+//ruta guardar productos
+Route::get('/facturas/visualizar', [ManejoProd::class, 'facturas'])->middleware(['admin']);
 //
 Route::get('/dashboard', function () {
     return view('dashboard');
