@@ -30,12 +30,9 @@
   <div class="col-md-3">
   <label for="validationCustom03" class="form-label">Categoria</label><br>
     <select id="lista" name="lista" required>
-    <option >Elija una categoria</option>
-    <option value="1">Sombreros</option>
-    <option value="2">Ruanas</option>
-    <option value="3">Sacos </option>
-    <option value="4">Bolsos</option>
-    <option value="5">Bisuteria</option>
+    @foreach($cat as $c)
+    <option value="{{$c->id}}">{{$c->nombreCategoria}}</option>
+    @endforeach
     </select>
 </div>
   
@@ -47,6 +44,7 @@
   
   <div class="col-12">
   <button type="submit" class="btn btn-success"> Registrar </button>
+  <a href="{{route('lista_productos')}}" class="btn btn-primary">Productos</a>
   </div>
 </form>
 @stop

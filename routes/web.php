@@ -56,11 +56,23 @@ Route::post('/categorias/registro', [Categorias::class, 'registrar'])->middlewar
 Route::get('/categorias/visualizar', [Comentarios::class, 'visu'])->name('visualizar');
 //formulario productos
 Route::get('/productos/formulario', [ManejoProd::class, 'index'])->name('prodForm')->middleware(['admin']);
+//formulario productos
+//Route::get('/productos/formulario', [ManejoProd::class, 'categoria']);
 //ruta guardar productos
 Route::post('/productos/registro', [ManejoProd::class, 'registro']);
 //ruta guardar productos
 Route::get('/facturas/visualizar', [ManejoProd::class, 'facturas'])->middleware(['admin']);
-//
+//ruta guardar productos
+Route::get('/facturas/visualizar/listado', [ManejoProd::class, 'listado'])->name('lista_productos')->middleware(['admin']);
+//ver detalles
+Route::get('productos/detalle/{referencia}', [ManejoProd::class, 'detalle'])->name('detalles');//enviamos el parametro a la ruta
+//actualizar ruta get
+Route::get('productos/actualzar/{referencia}', [ManejoProd::class, 'formularioAct'])->name('form_acProd');
+//actualizar ruta post
+Route::post('productos/actualzar{referencia}', [ManejoProd::class, 'actualizar'])->name('actualizarProd');
+//eliminar
+Route::get('productos/eliminar/{referencia}', [ManejoProd::class, 'eliminar'])->name('eliminar_prod');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
