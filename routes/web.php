@@ -72,6 +72,10 @@ Route::get('productos/actualzar/{referencia}', [ManejoProd::class, 'formularioAc
 Route::post('productos/actualzar{referencia}', [ManejoProd::class, 'actualizar'])->name('actualizarProd');
 //eliminar
 Route::get('productos/eliminar/{referencia}', [ManejoProd::class, 'eliminar'])->name('eliminar_prod');
+//visualizar comentarios
+Route::get('admin/visualizar/comentarios', [Comentarios::class, 'visuadmin'])->name('comentario_admin')->middleware(['admin']);
+//eliminar comentarios
+Route::get('admin/visualizar/comentarios/eliminar/{id}', [Comentarios::class, 'eliminar'])->name('eliminar_comen');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

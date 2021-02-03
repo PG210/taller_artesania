@@ -75,7 +75,7 @@
             <li><a class="dropdown-item" href="{{url('/proveedores')}}">Proveedores</a></li>
             <li><a class="dropdown-item" href="{{url('/productos/formulario')}}">Productos</a></li>
             <li><a class="dropdown-item" href="{{url('/facturas/visualizar')}}">Facturas</a></li>
-            <li><a class="dropdown-item" href="#">Ofertas</a></li>
+            <li><a class="dropdown-item" href="{{route('comentario_admin')}}">comentarios</a></li>
           </ul>
         </li>  
       

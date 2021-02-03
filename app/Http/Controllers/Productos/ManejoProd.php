@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Producto;
 use App\Models\Categoria;
 
+
 class ManejoProd extends Controller
 {
     //public function index(){//retorna la vista o interactua con el modelo de datos
