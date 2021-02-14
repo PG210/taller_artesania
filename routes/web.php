@@ -47,7 +47,7 @@ Route::get('/productos/ruanas', [Productos::class, 'ruanas']);
 Route::get('/comentarios', [Comentarios::class, 'index']);
 
 //factura
-Route::get('/factura', [Factura::class, 'index']);
+Route::get('/factura', [Factura::class, 'index'])->name('fac');
 
 //proveedores
 Route::get('/proveedores', [Proveedores::class, 'index'])->middleware(['admin']);
@@ -83,6 +83,9 @@ Route::get('productos/detalle/usuario/{referencia}', [DetallesProdusu::class, 'd
 Route::get('productos/comprar/{referencia}', [DetallesProdusu::class, 'datos'])->name('compras');//enviamos el parametro a la ruta
 //
 Route::post('productos/detalle/comprar', [DetallesProdusu::class, 'factura'])->name('compraRealizada');
+//
+//pago
+Route::get('productos/detalle/comprar/pago', [DetallesProdusu::class, 'pago'])->name('forma_pago');
 //
 Route::get('/dashboard', function () {
     return view('dashboard');

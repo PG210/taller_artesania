@@ -15,11 +15,11 @@ class CreateFacturaTable extends Migration
     {
         Schema::create('facturas', function (Blueprint $table) {
             $table->bigIncrements('numfac');
-            $table->dateTime('fecha');
             $table->unsignedBigInteger('idprod');//atributo para referenciar a categoria
             $table->foreign('idprod')->references('referencia')->on('productos');//llave foranea para referenciar a la tabla categorias
             $table->unsignedBigInteger('cedula');//atributo para referenciar a categoria
             $table->foreign('cedula')->references('id')->on('users');//llave foranea para referenciar a la tabla categorias
+            $table->string('direccion', 50);
             $table->integer('cantidad');
             $table->unsignedBigInteger('pago');//atributo para referenciar a categoria
             $table->foreign('pago')->references('id')->on('forma_pago');//llave foranea para referenciar

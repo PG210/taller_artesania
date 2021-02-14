@@ -72,9 +72,9 @@
     <label for="validationCustom04" class="form-label">Forma de pago</label>
     <select class="form-select" id="pago" name="pago" required>
       <option selected disabled value=""> Elija una opcion...
-      </option>
-      <option value="1">Pse</option>
-      <option value="2">Efecty</option>
+    @foreach($pago as $c)
+     <option value="{{$c->id}}">{{$c->detalle}}</option>
+     @endforeach
     </select>
   </div>
   <div class="col-md-4">
