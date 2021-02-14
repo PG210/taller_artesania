@@ -8,12 +8,9 @@
         <div class="card" style="width: 15rem;">
                         <img src='{{ url("/imgProd/$p->fotoProducto") }}' class="card-img-top" alt="...">
                         <div class="card-body bg-primary text-white">
-                            <h5 class="card-title">Referencia: {{$p->referencia}}</h5>
-                            <p class="card-text">Nombre: {{$p->nombreProducto}} </p>
-                            <p class="card-text">Cantidad: {{$p->cantidadProducto}} </p>
-                            <p class="card-text">Precio: {{$p->precioProducto}}</p><!--Precio pertenece al atributo de la tabla Precio-->
                             <p class="card-text">Categoria: {{$p->nombreCategoria}}</p> <!--Tipo pertenece al atributo de la tabla Precio-->
                             <p class="card-text">Descripcion: {{$p->descripcion}}</p>
+                            <a href="{{route('detalle_prod_usu', $p->referencia)}}" class="btn btn-secondary">Detalles</a>
                         </div>
         </div>
         </div>

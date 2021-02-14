@@ -8,6 +8,7 @@ use App\Http\Controllers\Factura;
 use App\Http\Controllers\Proveedores;
 use App\Http\Controllers\Categorias;
 use App\Http\Controllers\Productos\ManejoProd;
+use App\Http\Controllers\DetallesProdusu;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,7 +35,7 @@ Route::get('arte/ubicacion', [Datos::class, 'ubicacion']);
 Route::get('/productos', [Productos::class, 'index']);
 
 //mochilas
-Route::get('/productos/mochilas', [Productos::class, 'mochila']);
+Route::get('/productos/mochilas', [Productos::class, 'mochila'])->name('mochila');
 //tejidos
 Route::get('/productos/tejidos', [Productos::class, 'tejidos'])->name('tejidos');
 //visuteria
@@ -76,7 +77,13 @@ Route::get('productos/eliminar/{referencia}', [ManejoProd::class, 'eliminar'])->
 Route::get('admin/visualizar/comentarios', [Comentarios::class, 'visuadmin'])->name('comentario_admin')->middleware(['admin']);
 //eliminar comentarios
 Route::get('admin/visualizar/comentarios/eliminar/{id}', [Comentarios::class, 'eliminar'])->name('eliminar_comen');
-
+//ver detalles mochilas usuarios
+Route::get('productos/detalle/usuario/{referencia}', [DetallesProdusu::class, 'detalle'])->name('detalle_prod_usu');//enviamos el parametro a la ruta
+//ver detalles mochilas usuarios
+Route::get('productos/comprar/{referencia}', [DetallesProdusu::class, 'datos'])->name('compras');//enviamos el parametro a la ruta
+//
+Route::post('productos/detalle/comprar', [DetallesProdusu::class, 'factura'])->name('compraRealizada');
+//
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

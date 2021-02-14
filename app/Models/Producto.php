@@ -13,5 +13,6 @@ class Producto extends Model
     public function product(){
         return $this->hasMany(Producto::class, 'referencia');
     }
+    
 
 }
