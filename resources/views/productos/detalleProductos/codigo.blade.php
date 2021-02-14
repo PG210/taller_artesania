@@ -22,6 +22,7 @@
             </h1> 
 	    <br>
         <a href="{{route('mochila')}}" class="btn btn-secondary">Regresar</a>
+		<a href="{{route('pdf')}}" class="btn btn-secondary">Descarga</a>
 	    </td>
 	</tr>
 	</table>

@@ -86,7 +86,10 @@ Route::post('productos/detalle/comprar', [DetallesProdusu::class, 'factura'])->n
 //
 //pago
 Route::get('productos/detalle/comprar/pago', [DetallesProdusu::class, 'pago'])->name('forma_pago');
+//pdf
+Route::get('productos/detalle/comprar/pago/descarga', [DetallesProdusu::class, 'descargarPDF'])->name('pdf');
 //
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

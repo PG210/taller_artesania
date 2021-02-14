@@ -12,6 +12,7 @@ use App\Models\Categoria;
 use App\Models\Usuario;
 use App\Models\Factura;
 use App\Models\FormaPago;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class DetallesProdusu extends Controller
 {
@@ -62,6 +63,13 @@ class DetallesProdusu extends Controller
             return redirect()->route('forma_pago'); 
         }
       // return redirect()->route('mochila');//retornar a vista o crear un evento con java
+   }
+   public function descargarPDF(){
+    $facturas= Factura::all();
+    $pdf= \PDF::loadView('facturas.productos.detalleProductos.codigo', ['facturas'=>$facturas]);
+ 
+    
+    return $pdf->dowland('facturas.pdf');
    }
 
    
