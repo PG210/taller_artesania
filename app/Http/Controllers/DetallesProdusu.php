@@ -21,6 +21,7 @@ class DetallesProdusu extends Controller
         $pro=Producto::findOrFail($id);//toca colocar algun join
         return view('productos.detalleProductos.detMochilas',compact('pro'));
       }
+     
 
       public function pago(){
         return view('productos.detalleProductos.codigo');
@@ -42,14 +43,20 @@ class DetallesProdusu extends Controller
       $q = $res->input('pre');
       $resul = $r*$q;
       $f =$res->input('pago');
+      $c =$res->input('can');
+      $d =$res->input('dir');
 
       $category = new Factura();//inyeccion de dependencias, crea un objeto
        //$category ->fecha->$date->format();
        $category -> idprod = $res->input('ref'); //category va a tener los atributos de la tabla 
        $category ->cedula =  $res->input('idCli'); 
-       $category ->cantidad =  $res->input('can'); 
+       $category ->cantidad =  $res->input('can');
+
        $category ->direccion =  $res->input('dir'); //esta mal 
        $category ->pago =  $res->input('pago'); 
+       if($c=="" || $d == "" || $f == ""){
+         return redirect()->route("dashboard");
+       }
        $category ->iva = $resul*0.19;//calcula el iva
        $category ->subtotal = $resul-$resul*0.19;
        $category ->total = $resul;//aqui hace una multiplicacion Nota costo mucho
@@ -60,23 +67,24 @@ class DetallesProdusu extends Controller
         }
 
         else{
-             $factu=DB::table('facturas')
-             ->join('productos', 'idprod', '=','productos.referencia')
-             ->join('users', 'cedula', '=','users.id')
-              ->join('forma_pago', 'pago', '=','forma_pago.id')
-             ->get();
-            return redirect()->route('forma_pago', ['factu'=>$factu]); 
+            
+            return redirect()->route('forma_pago'); 
         }
 
       // return redirect()->route('mochila');//retornar a vista o crear un evento con java
    }
 
    public function descargarPDF(){
-    $factu = Factura::all();
-    $pdf= \PDF::loadView('productos.detalleProductos.codigo', ['factu'=>$factu]);
+    $cli= auth()->user()->id;
+    $fac=DB::table('facturas')
+    ->join('productos', 'idprod', '=','productos.referencia')
+    ->join('users', 'cedula', '=','users.id')
+    ->join('forma_pago', 'pago', '=','forma_pago.id')
+    ->where('cedula', '=', $cli)
+    ->get();
+    $pdf = \PDF::loadView('productos.detalleProductos.descargaPDF', compact('fac'))->setOptions(['defaultFont' => 'sans-serif']); //este codigo arregla el pdf 
     return $pdf->download('descargafactura.pdf');
-   
-}
+   }
 
    
 }

@@ -15,8 +15,7 @@ class ManejoProd extends Controller
        // return view('admin.productos.formularioProd');
     //}
     
-    public function facturas(){//retorna la vista o interactua con el modelo de datos
-       
+    public function facturas(){//retorna la vista o interactua con el modelo de datos 
             $fac=DB::table('facturas')
             ->join('productos', 'idprod', '=','productos.referencia')
             ->join('users', 'cedula', '=','users.id')

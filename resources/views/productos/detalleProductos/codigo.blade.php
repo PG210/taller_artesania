@@ -9,27 +9,27 @@
    
 	<table width="550" bgcolor=FFCECB align="center">
 	<tr>
-        <br> <br> <br> <br>
+        <br> <br> 
 	    <td align="center">
 
 	    <h1 style="color:000000" >Codigo de Pago:</h1>
 	    
 	   <h1>
             <?php
-            echo rand(1001,10000);
+            echo rand(1001,10000);	
             ?>
             AB
             </h1> 
 	    <br>
         <a href="{{route('mochila')}}" class="btn btn-secondary">Regresar</a>
-		<a href="{{route('pdf')}}" class="btn btn-secondary">Descarga</a>
+        
+		<h5>Reporte Facturas</h5>
+	    <a href="{{route('pdf')}}" class="btn btn-secondary">Descarga</a>
 	    </td>
 	</tr>
 	</table>
- 
-   
-
 
 	</body>
 	</html>	
+
 	

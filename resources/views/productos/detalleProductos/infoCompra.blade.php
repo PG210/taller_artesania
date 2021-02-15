@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+
+
 <h1 class="text-center alert alert-warning alert-dismissible fade show"> DATOS DE LA FACTURA </h1>
 <div class="row g-3">
  <div class="col-md-4">
@@ -81,9 +83,21 @@
     <input type="hidden" class="form-control" value="{{$var->id}}" id="idCli"  name="idCli"  required>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Aceptar</button>
+    <button class="btn btn-primary" type="submit" onclick="hizoClick()">Aceptar</button>
     <a href="{{route('mochila') }}" class="btn btn-secondary">cancelar</a>
   </div>
 </form>
 <!--end --form-->
+<script>
+function hizoClick() {
+  var direc = document.getElementById("dir").value;
+  var pag = document.getElementById("pago").value;
+  var cant = document.getElementById("can").value;
+  if (direc == "" || pag == "" || cant == "") {
+      alert("Debes compeltar ambos campos"); 
+  } else {
+  alert("Enviado");
+  }
+}
+</script>
 @stop

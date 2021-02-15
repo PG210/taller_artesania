@@ -1,6 +1,12 @@
 @extends('layouts.app')
 @section('content')
-<h1 class="text-center"> Productos </h1>
+<h1 class="text-center alert alert-warning alert-dismissible fade show"> DATOS DEL PRODUCTO </h1>
+<div class="row g-3">
+ <div class="col-md-4">
+
+  </div>
+  <div class="col-md-4">
+ <!--carrusel-->
 <div class="container">
  <div class="row">
       <div class="col-md-4 alert-success"><br>
@@ -20,5 +26,14 @@
         </div>
        <br>
 </div>
+
+
+ <!--end--carrucel-->
+  </div>
+  <div class="col-md-4">
+
+  </div>
+  </div>
+
 
 @stop

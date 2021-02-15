@@ -9,7 +9,8 @@
                         
                             <div class="card-body bg-primary text-white">
                             <h5 class="card-title">Numero de Factura: {{$p->numfac}}</h5>
-                            <p class="card-text">Fecha: {{$p->fecha}}</p><!--Precio pertenece al atributo de la tabla Precio-->
+                            <p class="card-text">Fecha: {{$p->updated_at}}</p>
+                            <p class="card-text">Direccion: {{$p->direccion}}</p>
                             <p class="card-text">Producto: {{$p->nombreProducto}}</p> <!--Tipo pertenece al atributo de la tabla Precio-->
                             <p class="card-text">Nombre Cliente: {{$p->name}}</p>
                             <p class="card-text">Cantidad: {{$p->cantidad}}</p>
