@@ -58,19 +58,25 @@ class DetallesProdusu extends Controller
        if ($f==1){
             return redirect('https://registro.pse.com.co/PSEUserRegister/CreateRegister.htm?TipoPersona=0');
         }
+
         else{
-            
-            return redirect()->route('forma_pago'); 
+             $factu=DB::table('facturas')
+             ->join('productos', 'idprod', '=','productos.referencia')
+             ->join('users', 'cedula', '=','users.id')
+              ->join('forma_pago', 'pago', '=','forma_pago.id')
+             ->get();
+            return redirect()->route('forma_pago', ['factu'=>$factu]); 
         }
+
       // return redirect()->route('mochila');//retornar a vista o crear un evento con java
    }
+
    public function descargarPDF(){
-    $facturas= Factura::all();
-    $pdf= \PDF::loadView('facturas.productos.detalleProductos.codigo', ['facturas'=>$facturas]);
- 
-    
-    return $pdf->dowland('facturas.pdf');
-   }
+    $factu = Factura::all();
+    $pdf= \PDF::loadView('productos.detalleProductos.codigo', ['factu'=>$factu]);
+    return $pdf->download('descargafactura.pdf');
+   
+}
 
    
 }
