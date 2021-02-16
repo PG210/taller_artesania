@@ -19,7 +19,21 @@ class DetallesProdusu extends Controller
     public function detalle($referencia){
         $id=$referencia;
         $pro=Producto::findOrFail($id);//toca colocar algun join
-        return view('productos.detalleProductos.detMochilas',compact('pro'));
+
+        $tot=DB::table('productos')
+        ->where('referencia', '=', $id)
+        ->sum('cantidadProducto');
+
+        $res=DB::table('facturas')->where('idprod', '=', $id)
+        ->select('cantidad')
+        ->sum('cantidad');
+        $r=$tot-$res;
+        if($r<=0){
+          $r=0;
+          
+          //return redirect()->route('busProd');
+        }
+        return view('productos.detalleProductos.detMochilas',compact('pro', 'r'));
       }
      
 

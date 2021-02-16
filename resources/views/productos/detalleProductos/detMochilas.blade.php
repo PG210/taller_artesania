@@ -16,9 +16,15 @@
                         <h5 class="card-title">Referencia: {{$pro->referencia}}</h5>
                             <p class="card-text">Nombre: {{$pro->nombreProducto}} </p>
                             <p class="card-text">Cantidad: {{$pro->cantidadProducto}} </p>
+                            <p class="card-text">Disponible: {{$r}} </p>
+                          
                             <p class="card-text">Precio: {{$pro->precioProducto}}</p><!--Precio pertenece al atributo de la tabla Precio-->
                         </div>
+                        @if($r>0)
                         <a href="{{route('compras', $pro->referencia)}}" class="btn btn-secondary">Comprar</a>
+                        @endif
+                        
+                        <a href="{{route('crearComentario', $pro->referencia)}}" class="btn btn-warning">Comentar</a>            
         
         </div>
         </div>

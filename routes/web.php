@@ -44,7 +44,7 @@ Route::get('/productos/visuteria', [Productos::class, 'visuteria']);
 Route::get('/productos/ruanas', [Productos::class, 'ruanas']);
 
 //comentarios
-Route::get('/comentarios', [Comentarios::class, 'index']);
+Route::get('/comentarios', [Comentarios::class, 'index'])->name('todos');
 
 //factura
 Route::get('/factura', [Factura::class, 'index'])->name('fac');
@@ -92,6 +92,11 @@ Route::get('descarga', [DetallesProdusu::class, 'descargarPDF'])->name('pdf');
 Route::post('factura/buscar', [ManejoProd::class, 'buscarFac'])->name('busqueda');
 //buscar producto
 Route::post('producto/buscar/nombre', [Productos::class, 'buscarProd'])->name('busProd');
+//
+//crear comentario
+Route::get('producto/comentario/{referencia}', [Comentarios::class, 'comen'])->name('crearComentario');
+//crear comentario
+Route::post('producto/comentario', [Comentarios::class, 'guardar'])->name('guarComen');
 //
 //buscar producto
 Route::get('producto/buscar/nombre', [Productos::class, 'prueba'])->name('busProducto');

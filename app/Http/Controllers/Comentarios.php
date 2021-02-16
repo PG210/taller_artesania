@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Comentario;
-
+use App\Models\Producto;
 class Comentarios extends Controller
 {
  
@@ -37,5 +37,21 @@ class Comentarios extends Controller
         $p ->delete();
         return redirect()->route('comentario_admin');
        }
+       public function comen($referencia){
+        $pr= Producto::findOrfail($referencia);//encontrar el producto por el id
+        return view('productos.detalleProductos.crearcomen', compact('pr'));//enviar varios arreglos
+    }
+    public function guardar(Request $request){
+        $cli= auth()->user()->id;
+        $category = new Comentario();
+        $category->cedCli=$cli;
+        $category->id_Prod = $request->input('ref');
+        $category->Comentario = $request->input('com');
+        $category->fecha = $request->input('fec');
+        $category->save();
+        return redirect()->route('todos');
+        
+ }
+
   
 }
