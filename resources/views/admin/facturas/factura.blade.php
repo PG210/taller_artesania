@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('content')
 <h4 class="text-center">FACTURAS</h4>
+<a href="{{route('pdf_admin')}}" class="btn btn-secondary">Descarga Reporte ventas</a>
+<br>
+<br>
 <div class="container">
  <div class="row">
     @foreach($fac as $p)
@@ -9,7 +12,7 @@
                         
                             <div class="card-body bg-primary text-white">
                             <h5 class="card-title">Numero de Factura: {{$p->numfac}}</h5>
-                            <p class="card-text">Fecha: {{$p->fecha}}</p><!--Precio pertenece al atributo de la tabla Precio-->
+                            <!--Precio pertenece al atributo de la tabla Precio-->
                             <p class="card-text">Producto: {{$p->nombreProducto}}</p> <!--Tipo pertenece al atributo de la tabla Precio-->
                             <p class="card-text">Nombre Cliente: {{$p->name}}</p>
                             <p class="card-text">Cantidad: {{$p->cantidad}}</p>

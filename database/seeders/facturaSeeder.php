@@ -16,7 +16,6 @@ class facturaSeeder extends Seeder
     {
         $datos = [
             [   'numfac'=>3001,
-                'fecha' => "2021-01-16",
                 'idprod'=> 1001,
                 'cedula' => 1,
                 'cantidad' => 1,
@@ -27,7 +26,6 @@ class facturaSeeder extends Seeder
             ],
         
             [   'numfac'=>3002,
-                'fecha' => "2021-01-15",
                 'idprod'=> 1002,
                 'cedula' => 2,
                 'cantidad' => 2,
@@ -38,7 +36,6 @@ class facturaSeeder extends Seeder
             ],
 
             [   'numfac'=>3003,
-                'fecha' => "2021-01-14",
                 'idprod'=> 1003,
                 'cedula' => 1,
                 'cantidad' => 1,

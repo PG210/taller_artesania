@@ -1,6 +1,16 @@
 @extends('layouts.app')
 @section('content')
 <h4 class="text-center">FACTURAS</h4>
+<br>
+
+  <form class="form-inline" action ="{{route('busqueda')}}" method="POST" >
+    @csrf
+    <input name="buscarpor" class="form-control mr-sm-2" type="search" placeholder="Buscar por numero de factura" aria-label="Search">
+    <br>
+   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+  </form>
+
+<br>
 <div class="container">
  <div class="row">
     @foreach($fac as $p)

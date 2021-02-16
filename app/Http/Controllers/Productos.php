@@ -47,4 +47,28 @@ class Productos extends Controller
         ->get();
         return view('productos.ruanas',['ruana'=>$ruana]);
     }
+
+   public function buscarProd(Request $request){//retorna la vista o interactua con el modelo de datos
+        $bus = $request->input('bProd');
+        $produc=DB::table('productos')
+        ->join('categorias', 'categoria', '=','categorias.id')//precio es la tabla, precio_id es atributo de tabla habitaciones
+        ->orderBy('referencia', 'asc')
+        ->where('nombreCategoria', '=', $bus)
+        ->get();
+        return view('productos.buscar',['produc'=>$produc]);
+    }
+
+    public function prueba(){//retorna la vista o interactua con el modelo de datos
+        $produc=DB::table('productos')
+        ->join('categorias', 'categoria', '=','categorias.id')//precio es la tabla, precio_id es atributo de tabla habitaciones
+        ->orderBy('referencia', 'asc')
+        ->where('referencia', '=', '1001')
+        ->get();
+        return view('productos.buscar',['produc'=>$produc]);
+    }
+    
+    public function vis(){//retorna la vista o interactua con el modelo de datos
+        return view('productos.buscar');//
+    }
+
 }

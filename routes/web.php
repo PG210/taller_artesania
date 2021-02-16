@@ -50,7 +50,7 @@ Route::get('/comentarios', [Comentarios::class, 'index']);
 Route::get('/factura', [Factura::class, 'index'])->name('fac');
 
 //proveedores
-Route::get('/proveedores', [Proveedores::class, 'index'])->middleware(['admin']);
+Route::get('/proveedores', [Proveedores::class, 'index'])->name('vista_prov')->middleware(['admin']);
 //categoria
 Route::post('/categorias/registro', [Categorias::class, 'registrar'])->middleware(['admin']);
 //categoria visualizar
@@ -88,10 +88,27 @@ Route::post('productos/detalle/comprar', [DetallesProdusu::class, 'factura'])->n
 Route::get('productos/detalle/comprar/pago', [DetallesProdusu::class, 'pago'])->name('forma_pago');
 //pdf
 Route::get('descarga', [DetallesProdusu::class, 'descargarPDF'])->name('pdf');
+//buscar factura
+Route::post('factura/buscar', [ManejoProd::class, 'buscarFac'])->name('busqueda');
+//buscar producto
+Route::post('producto/buscar/nombre', [Productos::class, 'buscarProd'])->name('busProd');
 //
-
+//buscar producto
+Route::get('producto/buscar/nombre', [Productos::class, 'prueba'])->name('busProducto');
 //
+//Formulario Actualizar proveedor
+Route::get('admin/actualizar/formulario/proveedor/{idprov}', [Proveedores::class, 'formulario'])->name('form_prov')->middleware(['admin']);//admin
+// Actualizar proveedor
+//
+Route::post('admin/actualzar/{idprov}', [ManejoProd::class, 'actuProv'])->name('ProvActu')->middleware(['admin']); //admin
+//registrar proveedor
+Route::post('admin/registrar/proveedor', [ManejoProd::class, 'reg'])->name('provform')->middleware(['admin']);
+//ruta al boton vista proveedor
+Route::get('admin/registrar/formulario/proveedor', [Proveedores::class, 'vista'])->name('llamar_vista')->middleware(['admin']);
 
+//pdf
+Route::get('admin/descarga/reporte', [DetallesProdusu::class, 'desPDF'])->name('pdf_admin');
+//
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

@@ -16,6 +16,7 @@ class CreateFormaPagoTable extends Migration
         Schema::create('forma_pago', function (Blueprint $table) {
             $table->id();
             $table->string('detalle', 100);
+            $table->timestamps();
         });
     }
 

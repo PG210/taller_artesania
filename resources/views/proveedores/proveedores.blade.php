@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('content')
 <h4 class="text-center"> Proveedores </h4>
+<br>
+
+<br>
 <div class="container">
  <div class="row">
     @foreach($prov as $p)
@@ -13,6 +16,8 @@
                             <p class="card-text">Telefono Proveedor {{$p->telProv}}</p> <!--Tipo pertenece al atributo de la tabla Precio-->
                             <p class="card-text">Nombre Producto {{$p->nombreProducto}}</p>
                             <p class="card-text">Precio Producto {{$p->preCompra}}</p>
+                            <a href="{{route('form_prov', $p->idprov)}}" class="btn btn-secondary">Actualizar</a>
+                      
                         </div>
         </div>
         </div>
@@ -20,6 +25,7 @@
         <br>
         </div>
        <br>
-</div>
 
+</div>
+ <a href="{{route('llamar_vista')}}" class="btn btn-secondary">Registrar</a>
 @stop

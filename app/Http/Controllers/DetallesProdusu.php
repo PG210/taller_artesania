@@ -85,6 +85,17 @@ class DetallesProdusu extends Controller
     $pdf = \PDF::loadView('productos.detalleProductos.descargaPDF', compact('fac'))->setOptions(['defaultFont' => 'sans-serif']); //este codigo arregla el pdf 
     return $pdf->download('descargafactura.pdf');
    }
-
+   //pdf admin
+   public function desPDF(){
+    $factu=DB::table('facturas')
+    ->join('productos', 'idprod', '=','productos.referencia')
+    ->join('users', 'cedula', '=','users.id')
+    ->join('forma_pago', 'pago', '=','forma_pago.id')
+    ->get();
+    $suma = Factura::sum('total');
+    $pdf = \PDF::loadView('admin.facturas.reporte', compact('factu','suma'))->setOptions(['defaultFont' => 'sans-serif']); //este codigo arregla el pdf 
+    return $pdf->download('reporte_admin.pdf');
+   }
+  
    
 }

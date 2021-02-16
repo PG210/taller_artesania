@@ -21,7 +21,7 @@ class CreateProveedorTable extends Migration
             $table->unsignedBigInteger('idProd');//atributo para referenciar a categoria
             $table->foreign('idProd')->references('referencia')->on('productos');//llave foranea para referenciar a la tabla categorias
             $table->float('preCompra');
-            
+            $table->timestamps();
         });
     }
 

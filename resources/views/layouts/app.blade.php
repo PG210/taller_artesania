@@ -56,7 +56,7 @@
             <li><a class="dropdown-item" href="{{url('/productos/tejidos')}}">Tejidos</a></li>
             <li><a class="dropdown-item" href="{{url('/productos/visuteria')}}">Visuterias</a></li>
             <li><a class="dropdown-item" href="{{url('/productos/ruanas')}}">Ruanas</a></li>
-            <li><a class="dropdown-item" href="#">Ofertas</a></li>
+            <li><a class="dropdown-item" href="{{url('/producto/buscar/nombre')}}">Buscar</a></li>
           </ul>
         </li>
         <li class="nav-item">
