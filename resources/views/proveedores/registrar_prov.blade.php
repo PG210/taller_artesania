@@ -24,7 +24,7 @@
   </div>
   <div class="col-md-3">
     <label for="validationCustom03" class="form-label">Telefono</label>
-    <input type="number" class="form-control" id="tel" name="tel"    required>
+    <input type="number" class="form-control" id="tel" name="tel" min="0"    required>
   </div>
   <div class="col-md-3">
   <label for="validationCustom03" class="form-label">Producto</label><br>
@@ -37,10 +37,10 @@
   <!--carga-file-->
   <div class="col-md-3">
     <label for="validationCustom03" class="form-label">Precio de Compra</label>
-    <input type="number" class="form-control" id="precompra" name="precompra"    required>
+    <input type="number" class="form-control" id="precompra" name="precompra" min="1000"    required>
   </div>
   <div class="col-12">
-  <button type="submit" class="btn btn-success"> Actualizar </button>
+  <button type="submit" class="btn btn-success"> Registrar </button>
   </div>
 </form>
 @stop

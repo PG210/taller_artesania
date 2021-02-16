@@ -94,7 +94,7 @@ function hizoClick() {
   var pag = document.getElementById("pago").value;
   var cant = document.getElementById("can").value;
   if (direc == "" || pag == "" || cant == "") {
-      alert("Debes compeltar ambos campos"); 
+      alert("Debes compeltar todos campos"); 
   } else {
   alert("Enviado");
   }
